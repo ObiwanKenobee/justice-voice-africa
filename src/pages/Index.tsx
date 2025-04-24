@@ -7,12 +7,26 @@ import QandASection from '../components/QandASection';
 import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { SEOHead } from '@/components/seo/SEOHead';
+import { generateLegalServiceSchema } from '@/utils/schemaGenerators';
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Dynamic schema based on user language/region
+  const schema = generateLegalServiceSchema({
+    additionalAreas: ["Lagos", "Nairobi", "Johannesburg", "Manila", "Dhaka", "Kyiv"]
+  });
 
   return (
     <div className="flex flex-col min-h-screen">
+      <SEOHead
+        title={`${t('appName')} | ${t('tagline')}`}
+        description={t('aboutText')}
+        schema={schema}
+        locale={language === 'en' ? 'en_US' : language === 'fr' ? 'fr_FR' : `${language}_${language.toUpperCase()}`}
+      />
+      
       <Header />
       
       <main className="flex-grow">
@@ -48,6 +62,7 @@ const Index = () => {
         {/* Features Grid */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Legal Help Without Barriers</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-card rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow animate-fade-in">
                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
@@ -78,6 +93,34 @@ const Index = () => {
                 <h3 className="text-lg font-bold mb-2">Connect With Advocates</h3>
                 <p className="text-muted-foreground">Link with human rights organizations, lawyers, and community advocates for further support.</p>
               </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Location-Based Help Section */}
+        <section className="py-12 px-4 bg-muted/20">
+          <div className="container mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Legal Help Wherever You Are</h2>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Supporting communities across the world with localized legal resources
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { city: "Lagos", country: "Nigeria" },
+                { city: "Nairobi", country: "Kenya" },
+                { city: "Johannesburg", country: "South Africa" },
+                { city: "Manila", country: "Philippines" },
+                { city: "Dhaka", country: "Bangladesh" },
+                { city: "Detroit", country: "USA" },
+                { city: "Kyiv", country: "Ukraine" },
+                { city: "Gaza", country: "Palestine" }
+              ].map((location) => (
+                <div key={location.city} className="bg-card rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-all hover:translate-y-[-2px]">
+                  <h3 className="font-bold">{location.city}</h3>
+                  <p className="text-sm text-muted-foreground">{location.country}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

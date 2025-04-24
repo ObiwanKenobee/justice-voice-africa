@@ -1,4 +1,3 @@
-
 export interface Language {
   code: string;
   name: string;
@@ -38,6 +37,8 @@ export const translations: Record<string, Record<string, string>> = {
   en: {
     appName: 'JusticeOS',
     tagline: 'Empowering African communities to document and address human rights issues',
+    seoTitle: 'JusticeOS | Free Legal Tech for Human Rights Documentation',
+    seoDescription: 'Easy access to legal tools for documenting human rights violations. Mobile-friendly for all communities.',
     reportButton: 'Report an Issue',
     askQuestion: 'Ask a Legal Question',
     learnMore: 'Learn More',
@@ -55,10 +56,17 @@ export const translations: Record<string, Record<string, string>> = {
     aboutText: 'JusticeOS is an AI-driven platform empowering African communities to understand, document, and escalate human rights issues with multilingual support.',
     contactTitle: 'Contact Us',
     footerTagline: 'Dignity, Justice, and Human Rights for All',
+    // Location specific SEO content
+    lagos_title: 'Legal Help in Lagos | Free Justice Tech for Nigerians',
+    lagos_description: 'Access free legal tools and guidance in Lagos. Report rights violations, find legal aid, and get support in English, Yoruba, and Hausa.',
+    nairobi_title: 'Legal Support in Nairobi | Human Rights Documentation',
+    nairobi_description: 'Easy-to-use legal aid technology for Nairobi residents. Document rights abuses and connect with local advocates in Swahili or English.',
   },
   sw: {
     appName: 'JusticeOS',
     tagline: 'Kuwezesha jamii za Afrika kurekodia na kushughulikia masuala ya haki za binadamu',
+    seoTitle: 'JusticeOS | Teknolojia ya Kisheria ya Bure kwa Haki za Binadamu',
+    seoDescription: 'Ufikiaji rahisi wa zana za kisheria kwa kurekodi ukiukaji wa haki za binadamu. Rafiki wa simu ya mkononi kwa jamii zote.',
     reportButton: 'Ripoti Suala',
     askQuestion: 'Uliza Swali la Kisheria',
     learnMore: 'Jifunze Zaidi',
@@ -76,10 +84,15 @@ export const translations: Record<string, Record<string, string>> = {
     aboutText: 'JusticeOS ni jukwaa linalotumia AI kuwezesha jamii za Afrika kuelewa, kurekodia na kuripoti masuala ya haki za binadamu kwa usaidizi wa lugha nyingi.',
     contactTitle: 'Wasiliana Nasi',
     footerTagline: 'Hadhi, Haki na Haki za Binadamu kwa Wote',
+    // Location specific SEO content
+    nairobi_title: 'Usaidizi wa Kisheria Nairobi | Uwekaji wa Nyaraka za Haki za Binadamu',
+    nairobi_description: 'Teknolojia ya msaada wa kisheria rahisi kutumia kwa wakazi wa Nairobi. Weka hati za ukiukaji wa haki na unganisha na watetezi wa ndani kwa Kiswahili au Kiingereza.',
   },
   fr: {
     appName: 'JusticeOS',
     tagline: 'Permettre aux communautés africaines de documenter et de résoudre les problèmes de droits humains',
+    seoTitle: 'JusticeOS | Technologie Juridique Gratuite pour les Droits de l\'Homme',
+    seoDescription: 'Accès facile aux outils juridiques pour documenter les violations des droits de l\'homme. Adapté aux mobiles pour toutes les communautés.',
     reportButton: 'Signaler un Problème',
     askQuestion: 'Poser une Question Juridique',
     learnMore: 'En Savoir Plus',
@@ -97,10 +110,15 @@ export const translations: Record<string, Record<string, string>> = {
     aboutText: 'JusticeOS est une plateforme basée sur l\'IA permettant aux communautés africaines de comprendre, documenter et signaler les problèmes de droits humains avec un support multilingue.',
     contactTitle: 'Contactez-nous',
     footerTagline: 'Dignité, Justice et Droits Humains pour Tous',
+    // Location specific SEO content
+    lagos_title: 'Assistance Juridique à Lagos | Technologie pour les Droits Humains',
+    lagos_description: 'Accédez à des outils juridiques gratuits à Lagos. Signaler les violations des droits et obtenir du soutien en français.',
   },
   ha: {
     appName: 'JusticeOS',
     tagline: 'Ƙarfafa al\'ummomin Afirka don rubuta da magance matsalolin haƙƙin ɗan adam',
+    seoTitle: 'JusticeOS | Fasahar Shari\'a Kyauta don Rubuce-rubucen Haƙƙin Dan Adam',
+    seoDescription: 'Samun sauƙin kayan aikin shari\'a don rubuta keta haƙƙin ɗan adam. Mai sauƙin amfani da wayar hannu ga duk al\'ummomi.',
     reportButton: 'Bayar da Rahoto',
     askQuestion: 'Tambayi Tambaya',
     learnMore: 'Ƙara Koyo',
@@ -118,10 +136,15 @@ export const translations: Record<string, Record<string, string>> = {
     aboutText: 'JusticeOS wani dandali ne mai amfani da AI don ƙarfafa al\'ummomin Afrika don fahimta, rubuta, da ɗaga matsalolin haƙƙin ɗan adam tare da tallafi na harsuna da yawa.',
     contactTitle: 'Tuntuɓe mu',
     footerTagline: 'Mutunci, Adalci, da Haƙƙin Ɗan Adam ga Duka',
+    // Location specific SEO content
+    lagos_title: 'Taimako na Shari\'a a Lagos | Fasaha kyauta don Haƙƙin Ɗan Adam',
+    lagos_description: 'Samun kayan aiki na shari\'a kyauta a Lagos. Bayar da rahoto kan cin zarafin haƙƙi, neman taimako na shari\'a, da samun tallafi cikin Turanci, Hausa.',
   },
   yo: {
     appName: 'JusticeOS',
     tagline: 'Ṣiṣe agbára fún àwùjọ Africa láti ṣàkọsílẹ̀ àti yanjú àwọn ọ̀rànlọ́wọ́ ẹ̀tọ́ ọmọnìyàn',
+    seoTitle: 'JusticeOS | Ìmọ̀ Ẹ̀rọ Òfin Ọ̀fẹ́ fún Ìwé-àkọsílẹ̀ Ẹ̀tọ́ Ọmọnìyàn',
+    seoDescription: 'Rírọrùn láti wọlé sí àwọn irinṣẹ́ òfin fún ṣíṣe àkọsílẹ̀ àwọn ìwà ìbàjẹ́ ẹ̀tọ́ ọmọnìyàn. Ọ̀rẹ́ fún gbogbo àwọn àwùjọ.',
     reportButton: 'Ṣàlàyé Ọ̀rànlọ́wọ́',
     askQuestion: 'Béèrè Ìbéèrè Òfin',
     learnMore: 'Kọ́ Síi',
@@ -139,5 +162,8 @@ export const translations: Record<string, Record<string, string>> = {
     aboutText: 'JusticeOS jẹ́ pèpèle AI-ìdarí tí ó ṣe agbára fún àwùjọ Africa láti lóye, ṣàkọsílẹ̀, àti gbé àwọn ọ̀rànlọ́wọ́ ẹ̀tọ́ ọmọnìyàn pẹ̀lú àtìlẹ́yìn èdè púpọ̀.',
     contactTitle: 'Kan Si Wa',
     footerTagline: 'Ìtẹ́wọ́gbà, Ìdájọ́, àti Ẹ̀tọ́ Ọmọnìyàn fún Gbogbo Ẹni',
+    // Location specific SEO content
+    lagos_title: 'Iranlowo Ofin ni Lagos | Imọ-ẹrọ Idajọ fun Yoruba',
+    lagos_description: 'Wọle si awọn irinṣẹ ofin ọfẹ ati itọsọna ni Lagos. Ṣe ijabọ awọn ifasẹyin ẹtọ, wa iranlọwọ ofin, ati gba atilẹyin ni Yoruba tabi Gẹẹsi.',
   }
 };
