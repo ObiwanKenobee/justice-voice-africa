@@ -156,6 +156,51 @@ export type Database = {
         }
         Relationships: []
       }
+      cases: {
+        Row: {
+          assigned_to: string | null
+          category: string | null
+          created_at: string | null
+          description: string | null
+          evidence_links: string[] | null
+          id: string
+          incident_date: string | null
+          location: string | null
+          reporter_id: string | null
+          status: string | null
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          assigned_to?: string | null
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          evidence_links?: string[] | null
+          id?: string
+          incident_date?: string | null
+          location?: string | null
+          reporter_id?: string | null
+          status?: string | null
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          assigned_to?: string | null
+          category?: string | null
+          created_at?: string | null
+          description?: string | null
+          evidence_links?: string[] | null
+          id?: string
+          incident_date?: string | null
+          location?: string | null
+          reporter_id?: string | null
+          status?: string | null
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       collaboration_metrics: {
         Row: {
           contract_status: string
