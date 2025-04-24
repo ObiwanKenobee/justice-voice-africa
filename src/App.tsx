@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,9 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import CasesPage from "./pages/CasesPage";
-import NewCasePage from "./pages/NewCasePage";
-import EditCasePage from "./pages/EditCasePage";
+import CasesPage from "./pages/cases/Index";
+import NewCasePage from "./pages/cases/New";
+import EditCasePage from "./pages/cases/Edit";
 
 const queryClient = new QueryClient();
 

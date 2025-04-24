@@ -10,7 +10,12 @@ export const casesService = {
       .order('created_at', { ascending: false });
     
     if (error) throw error;
-    return data;
+    
+    // Ensure the status matches our expected type
+    return data.map(item => ({
+      ...item,
+      status: item.status as Case['status']
+    })) as Case[];
   },
 
   async getCaseById(id: string) {
@@ -21,7 +26,12 @@ export const casesService = {
       .single();
     
     if (error) throw error;
-    return data;
+    
+    // Ensure the status matches our expected type
+    return {
+      ...data,
+      status: data.status as Case['status']
+    } as Case;
   },
 
   async createCase(caseData: Omit<Case, 'id' | 'created_at' | 'updated_at'>) {
