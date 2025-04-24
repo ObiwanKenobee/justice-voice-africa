@@ -16,12 +16,12 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <HelmetProvider>
-      <TooltipProvider>
-        <LanguageProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <HelmetProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/cases" element={<CasesPage />} />
@@ -29,10 +29,10 @@ const App = () => (
               <Route path="/cases/edit/:id" element={<EditCasePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
-        </LanguageProvider>
-      </TooltipProvider>
-    </HelmetProvider>
+          </TooltipProvider>
+        </HelmetProvider>
+      </BrowserRouter>
+    </LanguageProvider>
   </QueryClientProvider>
 );
 

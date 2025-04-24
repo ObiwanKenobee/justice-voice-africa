@@ -30,9 +30,18 @@ export const SEOHead = ({
   children,
   type = "website",
 }: SEOProps) => {
-  const location = useLocation();
+  // Try to use location, but don't crash if we're outside Router context
+  let pathname = "/";
+  try {
+    const location = useLocation();
+    pathname = location.pathname;
+  } catch (error) {
+    // Silently handle the case when we're outside Router context
+    console.debug("SEOHead used outside Router context, using default pathname");
+  }
+  
   const siteUrl = "https://justiceos.org"; // Should be configured from env or constants
-  const url = canonicalUrl || `${siteUrl}${location.pathname}`;
+  const url = canonicalUrl || `${siteUrl}${pathname}`;
 
   return (
     <Helmet>
